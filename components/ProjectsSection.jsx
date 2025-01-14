@@ -1,64 +1,60 @@
 "use client";
-import React, { useState } from "react";
-import ProjectCard from "./ProjectCard";
+import React from 'react';
+import Image from 'next/image';
 
-const projectsData = [
-  {
-    id: 1,
-    title: "Project 1",
-    description: "Project 1 description",
-    image: "/images/projects/1.png"
-  },
-  {
-    id: 2,
-    title: "Project 2",
-    description: "Project 2 description",
-    image: "/images/projects/2.png"
-  },
-  {
-    id: 3,
-    title: "Project 3",
-    description: "Project 3 description",
-    image: "/images/projects/3.png"
-  },
-  {
-    id: 4,
-    title: "Project 4",
-    description: "Project 4 description",
-    image: "/images/projects/4.png"
-  },
-  {
-    id: 5,
-    title: "Project 5",
-    description: "Project 5 descriptions",
-    image: "/images/projects/5.png"
-  },
-  {
-    id: 6,
-    title: "Project 6",
-    description: "Project 6 description",
-    image: "/images/projects/6.png"
-  },
+const projects = [
+    {
+        title: "Web Crawler and Search Engine",
+        description: "Developed the core logic of a multithreaded Python web crawler to index 50,000+ UCI domain pages, increasing crawler speed by 5 times by adding 5 threads to a single-threaded baseline. Built a SimHash algorithm to detect duplicates and avoided 80% of crawler traps during deployment. Engineered a search engine from scratch with <30ms query response time for 50,000+ pages.",
+        image: '/public/images/cover-photo.png',
+        // link: "https://www.filmate.club/",
+        techStack: ["Python", "C++", "Threading", "Flask", "JavaScript", "HTML/CSS"],
+    },
+    {
+        title: "Sudoku AI Solver",
+        description: "Developed an AI system to solve Sudoku puzzles, ranking top 8% among 100+ teams in terms of efficiency/effectiveness. Implemented heuristics and backtracking for efficient solution navigation, reducing average solve time by 40%.",
+        image: '/public/images/cover-photo.png',
+        // link: "https://yujisatojr.itch.io/highspeedchase",
+        techStack: ["Python", "Flask", "JavaScript", "HTML/CSS"],
+    },
 ];
 
-const ProjectsSection = () => {
-  return (
-    <>
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        Projects
-      </h2>
-      <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {projectsData.map((project) => (
-          <ProjectCard
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            imgUrl={project.image}
-          />
-        ))}
-      </div>
-    </>
-  );
-};
+function Project() {
+    return (
+        <div className="projects-container px-10 py-5 text-center" id="projects">
+            <h1 className="text-4xl font-bold mb-8 md:mb-12">Projects</h1>
+            <div className="projects-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12">
+                {projects.map((project, index) => (
+                    <div key={index} className="project text-left">
+                        <a href={project.link} target="_blank" rel="noreferrer">
+                            <div className="relative w-full h-64">
+                                <Image
+                                    src={project.image}
+                                    alt="thumbnail"
+                                    layout="fill"
+                                    objectFit="cover"
+                                    className="rounded-lg"
+                                />
+                            </div>
+                        </a>
+                        <a href={project.link} target="_blank" rel="noreferrer">
+                            <h2 className="text-xl mt-4 hover:underline, font-bold">{project.title}</h2>
+                        </a>
+                        <p className="text-gray-500 mt-2">{project.description}</p>
 
-export default ProjectsSection;
+                        {/* Tech Stack Section */}
+                        <div className="flex flex-wrap mt-4 justify-start">
+                          {project.techStack.map((tech, idx) => (
+                            <span key={idx} className="bg-gray-200 text-gray-700 text-sm px-3 py-1 rounded-full mr-2 mb-2">
+                              {tech}
+                            </span>
+                            ))}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+}
+
+export default Project;
