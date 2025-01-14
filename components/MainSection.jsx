@@ -36,11 +36,9 @@ const MainSection = () => {
           Aspiring Software Engineer
         </p>
         <p className="text-gray-500 text-base md:text-lg">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-          Maecenas porttitor congue massa. Fusce posuere, magna sed 
-          pulvinar ultricies, purus lectus malesuada libero, sit amet 
-          commodo magna eros quis urna.
-          </p>
+          I am currently pursuing a Bachelor's degree in Computer Science and Engineering at the University of California, 
+          Irvine, with an expected graduation in June 2025. I am excited to expand my knowledge and contribute to advancements in technology.        
+        </p>
         
       </div>
       <div className="col-span-5 place-self-center mt-4 lg:mt-0">

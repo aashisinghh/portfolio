@@ -34,7 +34,7 @@ const Navbar = () => {
           href="/"
           className="text-xl md:text-xl text-white font-semibold"
         >
-          LOGO
+          Aashi
         </Link>
         <div className="block md:hidden">
           {!navbarOpen ? (
