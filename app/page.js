@@ -10,7 +10,10 @@ export default function Home() {
     <main className="flex min-h-screen flex-col bg-[#121212]">
       <Navbar />
       <div className="container mx-auto mt-24 px-12 py-4">
-        <MainSection />
+        {/* Remove padding for MainSection */}
+        <div className="w-screen px-0">
+          <MainSection />
+        </div>
         <ExperienceSection />
         <ProjectsSection />
         <ContactSection />
