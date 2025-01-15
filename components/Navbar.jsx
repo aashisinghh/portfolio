@@ -1,9 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import NavLink from "./Navlink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import LogoIcon from "../public/logo-icon.png";
 
 const navLinks = [
   {
@@ -32,9 +34,8 @@ const Navbar = () => {
       <div className="flex flex-wrap items-center justify-between mx-auto p-4">
         <Link
           href="/"
-          className="text-xl md:text-xl text-white font-semibold"
-        >
-          Aashi
+          className="text-xl md:text-xl text-white font-semibold">
+           <Image src={LogoIcon} alt="Logo" className="w-auto h-8" />
         </Link>
         <div className="block md:hidden">
           {!navbarOpen ? (

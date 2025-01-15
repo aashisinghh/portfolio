@@ -11,13 +11,13 @@ import { motion } from "motion/react";
 
 const MainSection = () => {
   return (
-      <section className="h-screen w-full grid grid-cols-1 lg:grid-cols-12 my-4 -mt-8"
-        style={{
-          backgroundImage: "url('/background.png')",
-          backgroundSize: "cover", // Ensures the background covers the entire area
-          backgroundOrigin: "border-box", // Ensures the background includes padding
-          backgroundRepeat: "no-repeat", // Prevents the background from repeating
-        }}
+      <section className="h-screen w-full grid grid-cols-1 lg:grid-cols-12 my-4 -mt-1"
+        // style={{
+        //   backgroundImage: "url('/background.png')",
+        //   backgroundSize: "cover", // Ensures the background covers the entire area
+        //   backgroundOrigin: "border-box", // Ensures the background includes padding
+        //   backgroundRepeat: "no-repeat", // Prevents the background from repeating
+        // }}
       >
       <div className="col-span-7 place-self-center place-items-center grid lg:place-items-start">
           <div className="flex items-center gap-4 mb-6">
