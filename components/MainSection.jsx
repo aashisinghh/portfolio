@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,19 +7,12 @@ import GithubIcon from "../public/github-icon.svg";
 import LinkedinIcon from "../public/linkedin-icon.svg";
 import EmailIcon from "../public/email-icon.svg";
 import DocumentIcon from "../public/document-icon.svg";
-import { INVIEWSLIDE } from "../constants/index";
+import { INVIEWSLIDE, TYPEWRITER } from "../constants/index";
 import { motion } from "motion/react";
 
 const MainSection = () => {
   return (
-      <section className="h-screen w-full grid grid-cols-1 lg:grid-cols-12 my-4 -mt-1"
-        // style={{
-        //   backgroundImage: "url('/background.png')",
-        //   backgroundSize: "cover", // Ensures the background covers the entire area
-        //   backgroundOrigin: "border-box", // Ensures the background includes padding
-        //   backgroundRepeat: "no-repeat", // Prevents the background from repeating
-        // }}
-      >
+      <section className="h-screen w-full grid grid-cols-1 lg:grid-cols-12 my-4 -mt-1">
       <div className="col-span-7 place-self-center place-items-center grid lg:place-items-start">
           <div className="flex items-center gap-4 mb-6">
             <div className="socials flex flex-row gap-4 z-10">
@@ -37,13 +31,13 @@ const MainSection = () => {
             </div>
           </div>
           <h1 className="text-white max-w-2xl font-extrabold mb-6">
-            <span className="text-3xl lg:text-4xl">Hello, I'm</span>
+            <motion.span {...INVIEWSLIDE(0, 0)} className="text-3xl lg:text-4xl">Hello, I'm</motion.span>
             <br />
             <motion.span
               {...INVIEWSLIDE(0, 0)}
               className="text-7xl lg:text-8xl bg-gradient-to-br from-[#feac5e] via-[#c779d0] to-[#4bc0c8] bg-clip-text text-transparent"
             >
-              Aashi Singh
+              <TYPEWRITER words = {["Aashi Singh"]} typeSpeed = {100} cursor = {false} cursorStyle = {"_"}/>
             </motion.span>
           </h1>
           <p className="text-gray-300 mb-3 text-lg lg:text-xl">
