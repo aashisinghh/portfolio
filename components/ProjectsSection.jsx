@@ -12,49 +12,106 @@ const projects = [
     },
     {
         title: "Sudoku AI Solver",
-        description: "Developed an AI system to solve Sudoku puzzles, ranking top 8% among 100+ teams in terms of efficiency/effectiveness. Implemented heuristics and backtracking for efficient solution navigation, reducing average solve time by 40%.",
+        description: "Developed an AI system to solve Sudoku puzzles. Implemented heuristics and backtracking for efficient solution navigation, reducing average solve time by 40%.",
         image: '/public/images/cover-photo.png',
         // link: "https://yujisatojr.itch.io/highspeedchase",
         techStack: ["Python", "Flask", "JavaScript", "HTML/CSS"],
     },
+    {
+        title: "GlucoGuard",
+        description: "Developed a mobile application for an automated glucose delivery device, providing a flexible UI for monitoring nocturnal hypoglycemic episodes and receiving alerts. Engineered a logistic regression ML model to predict optimal glucose administration times, leveraging data from the Dexcom API and Firebase. Implemented a Flask server to simulate bluetooth communication on a Raspberry Pi.",
+        image: '/public/images/cover-photo.png',
+        link: "https://docs.google.com/presentation/d/1Zqc5Ua1vgUs_oG18x9vr4XdF1Pmi6V-MnmFGzapmAXw/edit#slide=id.g2725bdaa23d_0_152",
+        techStack: ["React Native", "TypeScript", "Python", "Flask", "Figma", "HTML/CSS", "ML", "Dexcom API", "Firebase", "Raspberry Pi"],
+    },
+    {
+        title: "Edsight",
+        description: "Edsight is a free visual analytics platform designed to spur insight, learning, and decision-making for teachers and professional development facilitators. Edsight works with five practical measures developed and tested by researchers and educators.",
+        image: '/public/images/cover-photo.png',
+        link: "https://www.edsight.io/",
+        techStack: ["Python", "React", "OpenAI API", "Prompt Engineering", "Research"],
+    },
+    {
+        title: "Columns Game",
+        description: "Created a puzzle-based columns game using PyGame libraries in Python, including UI design and visual elements. Incorporated various game mechanics using object-oriented programming.",
+        image: '/public/images/cover-photo.png',
+        // link: "https://yujisatojr.itch.io/highspeedchase",
+        techStack: ["Python", "PyGame", "OOP"],
+    },
+    {
+        title: "Flix",
+        description: "Flix is a movie browsing app that pulls data from The Movie Database API, allowing users to explore now-playing films and view detailed movie information and posters. Users can scroll through a list of movies, tap for more details, and toggle between a list and grid view using a CollectionView.",
+        image: '/public/images/cover-photo.png',
+        link: "https://github.com/aashisinghh/Flix",
+        techStack: ["Swift", "TMDb API"],
+    },
+    {
+        title: "Parstagram",
+        description: "This photo viewing app integrates with a custom Parse backend, enabling users to sign up, log in, and post photos with captions while viewing a global feed and interacting with comments. Features include user authentication, persistent login across app restarts, viewing the latest posts, and adding comments to shared photos.",
+        image: '/public/images/cover-photo.png',
+        link: "https://github.com/aashisinghh/Instagram",
+        techStack: ["Swift", "Parse SDK", "OAuth"],
+    },
+    {
+        title: "Twitter Clone",
+        description: "This Twitter clone allows users to compose, favorite, and retweet tweets while providing a seamless experience with features like login persistence across app restarts, infinite tweet loading, and a pull-to-refresh option. It includes a stylish launch screen, user profile integration, and the ability to view tweets with profile pictures, usernames, and text.",
+        image: '/public/images/cover-photo.png',
+        link: "https://github.com/aashisinghh/Twitter",
+        techStack: ["Swift", "OAuth", "Twitter API"],
+    },
 ];
 
-function Project() {
-    return (
-        <div className="projects-container px-10 py-5 text-center" id="projects">
-            <h1 className="text-4xl font-bold mb-8 md:mb-12">Projects</h1>
-            <div className="projects-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12">
-                {projects.map((project, index) => (
-                    <div key={index} className="project text-left">
-                        <a href={project.link} target="_blank" rel="noreferrer">
-                            <div className="relative w-full h-64">
-                                <Image
-                                    src={project.image}
-                                    alt="thumbnail"
-                                    layout="fill"
-                                    objectFit="cover"
-                                    className="rounded-lg"
-                                />
-                            </div>
-                        </a>
-                        <a href={project.link} target="_blank" rel="noreferrer">
-                            <h2 className="text-xl mt-4 hover:underline, font-bold">{project.title}</h2>
-                        </a>
-                        <p className="text-gray-500 mt-2">{project.description}</p>
-
-                        {/* Tech Stack Section */}
-                        <div className="flex flex-wrap mt-4 justify-start">
-                          {project.techStack.map((tech, idx) => (
-                            <span key={idx} className="bg-gray-200 text-gray-700 text-sm px-3 py-1 rounded-full mr-2 mb-2">
-                              {tech}
-                            </span>
-                            ))}
-                        </div>
-                    </div>
-                ))}
+const Project = () => {
+  return (
+    <div className="projects-container px-4 sm:px-12 md:px-24 py-10" id="projects">
+      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+        Projects
+      </h2>
+      <div className="projects-grid grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-screen-xl mx-auto">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="project-box bg-[#121212] shadow-md p-6 rounded-lg max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto"
+          >
+            <div className="relative w-full h-64 mb-4">
+              <Image
+                src={project.image}
+                alt="thumbnail"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg"
+              />
             </div>
-        </div>
-    );
-}
+            <div className="flex items-center justify-between mb-2">
+              <h2 className="text-xl font-bold text-white">{project.title}</h2>
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-block bg-gray-500 text-white px-4 py-1 text-sm rounded-md hover:bg-gray-700"
+                >
+                  View
+                </a>
+              )}
+            </div>
+            <p className="text-gray-400 mb-4">{project.description}</p>
+    
+            <div className="flex flex-wrap justify-start">
+              {project.techStack.map((tech, idx) => (
+                <span
+                  key={idx}
+                  className="bg-gray-800 text-gray-300 text-sm px-3 py-1 rounded-full mr-2 mb-2"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default Project;
