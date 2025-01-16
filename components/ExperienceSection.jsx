@@ -1,4 +1,7 @@
+"use client";
 import React from "react";
+import { INVIEWSLIDE } from "../constants/index";
+import { motion } from "motion/react";
 
 const timelineData = [
   {
@@ -66,18 +69,19 @@ const Timeline = () => {
         <ol className="relative border-s-2 border-gray-200 dark:border-gray-700">
           {timelineData.map((item, index) => (
             <li key={index} className="mb-10 ms-16">
-              <div className="bg-[#121212] p-6 rounded-lg shadow-md">
-                <div className="flex flex-wrap justify-between items-center mb-4">
-                  <span className="absolute flex items-center justify-center w-16 h-16 bg-gray-800 rounded-full -start-8">
-                    {/* Check if the logo exists, otherwise fallback to default logo */}
-                    <img
-                      src={item.logo || "/briefcase-icon.svg"} // Use custom logo or fallback
-                      alt="Logo"
-                      className={`${
-                        item.logo ? "w-16 h-16 object-cover rounded-full" : "w-8 h-8"
-                      }`}
-                    />
-                  </span>
+              <motion.span {...INVIEWSLIDE(0, 0)} className="absolute flex items-center justify-center w-16 h-16 bg-gray-800 rounded-full -start-8">
+                  {/* Check if the logo exists, otherwise fallback to default logo */}
+                  <img
+                    src={item.logo || "/briefcase-icon.svg"} // Use custom logo or fallback
+                    alt="Logo"
+                    className={`${
+                      item.logo ? "w-16 h-16 object-cover rounded-full" : "w-8 h-8"
+                    }`}
+                  />
+                </motion.span>
+              <motion.div {...INVIEWSLIDE(100, 0)} className="bg-[#121212] p-6 rounded-lg shadow-md">
+                <div  className="flex flex-wrap justify-between items-center mb-4">
+                 
                   <div className="flex flex-col">
                     <span className="text-xl font-semibold text-gray-900 dark:text-white">{item.title}</span>
                     <span className="text-md text-gray-400 dark:text-gray-500">{item.company}</span>
@@ -97,7 +101,7 @@ const Timeline = () => {
                     </span>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             </li>
           ))}
         </ol>

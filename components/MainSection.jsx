@@ -44,9 +44,9 @@ const MainSection = () => {
           >
             <TYPEWRITER
               words={["Aashi Singh"]}
-              typeSpeed={100}
-              cursor={false}
-              cursorStyle={"_"}
+              typeSpeed={300}
+              cursor={true}
+              cursorStyle={"|"}
             />
           </motion.span>
         </h1>
@@ -64,7 +64,7 @@ const MainSection = () => {
         {...INVIEWSLIDE(100, 0)}
         className="col-span-1 lg:col-span-5 place-self-center mt-0 sm:mt-0"
       >
-        <div className="bg-[#181818] w-[250px] sm:w-[300px] md:w-[350px] lg:w-[400px] h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-full relative overflow-hidden mx-auto">
+        <div className="bg-[#181818] w-[150px] sm:w-[200px] md:w-[250px] lg:w-[300px] h-[150px] sm:h-[200px] md:h-[250px] lg:h-[300px] rounded-full relative overflow-hidden mx-auto">
           <Image
             src="/cover-photo.png"
             alt="cover image"

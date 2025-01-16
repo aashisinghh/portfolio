@@ -1,6 +1,8 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
+import { INVIEWSLIDE } from "../constants/index";
+import { motion } from "motion/react";
 
 const projects = [
     {
@@ -69,9 +71,10 @@ const Project = () => {
       </h2>
       <div className="projects-grid grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-screen-xl mx-auto">
         {projects.map((project, index) => (
-          <div
+          <motion.div
             key={index}
             className="project-box bg-[#121212] shadow-md p-6 rounded-lg max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto"
+            {...INVIEWSLIDE(index % 2 === 0 ? -100 : 100, 0)}  // Use INVIEWSLIDE with dynamic x values
           >
             <div className="relative w-full h-64 mb-4">
               <Image
@@ -107,7 +110,7 @@ const Project = () => {
                 </span>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
