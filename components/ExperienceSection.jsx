@@ -5,46 +5,13 @@ import { motion } from "motion/react";
 
 const timelineData = [
   {
-    label: "UCI Molloi Imaging Physics Lab",
-    date: "September 2024 – Present",
-    title: "Machine Learning Researcher",
-    location: "Irvine, CA",
-    company: "Molloi Imaging Physics Lab @ UCI School of Medicine",
-    content:
-      "Contributing to deep learning-based cardiovascular disease diagnosis through heart chamber segmentation and non-invasive medical imaging techniques. Evaluating and improving CyTran, a GAN-based model, for translating contrast and non-contrast CT scans.",
-    techStack: ["Python", "PyTorch", "Deep Learning", "Machine Learning"],
-    logo: "/molloi-logo.jpg",
-  },
-  {
-    label: "UCI HERO Lab",
-    date: "September 2024 – Present",
-    title: "Software Development Researcher",
-    location: "Irvine, CA",
-    company: "HERO Lab @ UCI School of Engineering",
-    content:
-      "Developing a deep learning system to reconstruct ECG signals from real-time facial video using cWGANs. Leveraging AWS SageMaker for model training, deployment, and experimentation.",
-    techStack: ["Python", "Deep Learning", "AWS SageMaker", "AWS S3", "Machine Learning", "OpenCV"],
-    logo: "/hero-logo.png",
-  },
-  {
-    label: "UCI Design and Partnership Lab",
-    date: "January 2024 – Present",
-    title: "Software Developer",
-    location: "Irvine, CA",
-    company: "Design and Partnership Lab",
-    content:
-      "Collaborating with Chan Zuckerberg Initiative to develop an AI dashboard for evaluating student performance using LLMs. Employing advanced prompt engineering techniques, such as few-shot learning, chain-of-thought prompting, to assess ~500 student responses on the AUHSD 5 C's performance rubric with 75% accuracy. Creating and refining ~130 domains/subdomains to evaluate diverse student skills based on AUHSD performance criteria.",
-    techStack: ["Python", "OpenAI API", "Prompt Engineering", "LLMs"],
-    logo: "/daplab-logo.jpg",
-  },
-  {
     label: "UnitedHealth Group",
     date: "June 2024 – August 2024",
     title: "Software Engineering Intern",
     location: "Boston, MA",
     company: "UnitedHealth Group – Optum",
     content:
-      "Engineered a next best activity recommendation ML model for UnitedHealthcare Rewards App users using Amazon Personalize, resulting in a 30% increase in user engagement based on preliminary testing. Utilized AWS Glue to process and transform over 5 million user data records into clean datasets for model training. Built and deployed a GraphQL API using AWS Lambda and AWS AppSync that exposed interaction with the ML model, integrating recommendation data within a frontend proof of concept. Implemented a Cloud Development Kit (CDK) to automate infrastructure as code (IaC) creating reusable modules for AWS services, and integrated a CI/CD pipeline with GitHub Actions, which led to a 35% faster deployment cycle.",
+      "Engineered a next best activity recommendation ML model for UnitedHealthcare Rewards App users leveraging AWS services.Engineered a next best activity recommendation ML model for UnitedHealthcare Rewards App users leveraging AWS services.",
     techStack: ["AWS Lambda", "AWS AppSync", "AWS Personalize", "AWS Glue", "AWS S3", "AWS DynamoDB", "AWS CDK", "Python", "React Native", "GitHub Actions", "CI/CD", "ML"],
     logo: "/unitedhealthgroup-logo.jpg",
   },
@@ -55,10 +22,44 @@ const timelineData = [
     location: "Newport Beach, CA",
     company: "IMD Solutions",
     content:
-      "Developed a mobile application for the Automated Glucose Delivery Device (GlucoGuard), providing a flexible user interface for monitoring nocturnal hypoglycemic episodes and receiving alerts to enhance patient safety. Engineered a logistic regression ML model with an average precision score of 93.1% to predict optimal glucose administration times as a preventative measure, leveraging sandbox data from the Dexcom API and Firebase. Implemented a Flask server to simulate bluetooth communication on a Raspberry Pi, facilitating device interactions.",
+      "Developed a mobile application for the Automated Glucose Delivery Device (GlucoGuard) for monitoring nocturnal hypoglycemic episodes and receiving alerts. Engineered a logistic regression ML model to predict optimal glucose administration times.",
     techStack: ["React Native", "TypeScript", "Python", "Flask", "Figma", "HTML/CSS", "ML", "Dexcom API", "Firebase", "Raspberry Pi"],
     // logo: "/path/to/uci-logo.png",
   },
+  {
+    label: "UCI Design and Partnership Lab",
+    date: "January 2024 – Present",
+    title: "Software Developer",
+    location: "Irvine, CA",
+    company: "Design and Partnership Lab",
+    content:
+      "Collaborating with Chan Zuckerberg Initiative to develop an AI dashboard for evaluating student performance using LLMs. Employing advanced prompt engineering techniques, such as few-shot learning, chain-of-thought prompting to assess student responses.",
+    techStack: ["Python", "OpenAI API", "Prompt Engineering", "LLMs"],
+    logo: "/daplab-logo.jpg",
+  },
+  {
+    label: "UCI Molloi Imaging Physics Lab",
+    date: "September 2024 – Present",
+    title: "Machine Learning Researcher",
+    location: "Irvine, CA",
+    company: "Molloi Imaging Physics Lab @ UCI School of Medicine",
+    content:
+      "Contributing to deep learning-based cardiovascular disease diagnosis through heart chamber segmentation and non-invasive medical imaging techniques.",
+    techStack: ["Python", "PyTorch", "Deep Learning", "Machine Learning"],
+    logo: "/molloi-logo.jpg",
+  },
+  {
+    label: "UCI HERO Lab",
+    date: "September 2024 – Present",
+    title: "Software Development Researcher",
+    location: "Irvine, CA",
+    company: "HERO Lab @ UCI School of Engineering",
+    content:
+      "Developing a deep learning system to reconstruct ECG signals from real-time facial video using cWGANs.",
+    techStack: ["Python", "Deep Learning", "AWS SageMaker", "AWS S3", "Machine Learning", "OpenCV"],
+    logo: "/hero-logo.png",
+  },
+
 ];
 
 const Timeline = () => {

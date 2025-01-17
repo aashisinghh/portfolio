@@ -8,28 +8,28 @@ const projects = [
     {
         title: "Web Crawler and Search Engine",
         description: "Developed the core logic of a multithreaded Python web crawler to index 50,000+ UCI domain pages, increasing crawler speed by 5 times by adding 5 threads to a single-threaded baseline. Built a SimHash algorithm to detect duplicates and avoided 80% of crawler traps during deployment. Engineered a search engine from scratch with <30ms query response time for 50,000+ pages.",
-        image: '/public/images/cover-photo.png',
+        image: '/searchengine.gif',
         // link: "https://www.filmate.club/",
         techStack: ["Python", "C++", "Threading", "Flask", "JavaScript", "HTML/CSS"],
     },
     {
         title: "Sudoku AI Solver",
         description: "Developed an AI system to solve Sudoku puzzles. Implemented heuristics and backtracking for efficient solution navigation, reducing average solve time by 40%.",
-        image: '/public/images/cover-photo.png',
+        image: '/sudoku.gif',
         // link: "https://yujisatojr.itch.io/highspeedchase",
         techStack: ["Python", "Flask", "JavaScript", "HTML/CSS"],
     },
     {
         title: "GlucoGuard",
         description: "Developed a mobile application for an automated glucose delivery device, providing a flexible UI for monitoring nocturnal hypoglycemic episodes and receiving alerts. Engineered a logistic regression ML model to predict optimal glucose administration times, leveraging data from the Dexcom API and Firebase. Implemented a Flask server to simulate bluetooth communication on a Raspberry Pi.",
-        image: '/public/images/cover-photo.png',
-        link: "https://docs.google.com/presentation/d/1Zqc5Ua1vgUs_oG18x9vr4XdF1Pmi6V-MnmFGzapmAXw/edit#slide=id.g2725bdaa23d_0_152",
+        image: '/glucoguard.png',
+        link: "https://docs.google.com/presentation/d/1Zqc5Ua1vgUs_oG18x9vr4XdF1Pmi6V-MnmFGzapmAXw/edit#slide=id.g4dfce81f19_0_45",
         techStack: ["React Native", "TypeScript", "Python", "Flask", "Figma", "HTML/CSS", "ML", "Dexcom API", "Firebase", "Raspberry Pi"],
     },
     {
         title: "Edsight",
         description: "Edsight is a free visual analytics platform designed to spur insight, learning, and decision-making for teachers and professional development facilitators. Edsight works with five practical measures developed and tested by researchers and educators.",
-        image: '/public/images/cover-photo.png',
+        image: '/edsight.png',
         link: "https://www.edsight.io/",
         techStack: ["Python", "React", "OpenAI API", "Prompt Engineering", "Research"],
     },
@@ -37,6 +37,7 @@ const projects = [
         title: "Columns Game",
         description: "Created a puzzle-based columns game using PyGame libraries in Python, including UI design and visual elements. Incorporated various game mechanics using object-oriented programming.",
         image: '/public/images/cover-photo.png',
+        // image: '/columns.gif',
         // link: "https://yujisatojr.itch.io/highspeedchase",
         techStack: ["Python", "PyGame", "OOP"],
     },
@@ -74,14 +75,14 @@ const Project = () => {
           <motion.div
             key={index}
             className="project-box bg-[#121212] shadow-md p-6 rounded-lg max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto"
-            {...INVIEWSLIDE(index % 2 === 0 ? -100 : 100, 0)}  // Use INVIEWSLIDE with dynamic x values
+            {...INVIEWSLIDE(index % 2 === 0 ? -100 : 100, 0)}
           >
-            <div className="relative w-full h-64 mb-4">
+            <div className="relative w-full h-80 mb-4">
               <Image
                 src={project.image}
                 alt="thumbnail"
                 layout="fill"
-                objectFit="cover"
+                objectFit="full"
                 className="rounded-lg"
               />
             </div>
@@ -92,9 +93,9 @@ const Project = () => {
                   href={project.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-block bg-gray-500 text-white px-4 py-1 text-sm rounded-md hover:bg-gray-700"
+                  className="inline-block bg-gray-500 text-white px-2 py-2 text-sm rounded-md hover:bg-gray-700"
                 >
-                  View
+                  <img src={"/arrow-icon.svg"} alt="Arrow" width={16} height={16} />
                 </a>
               )}
             </div>

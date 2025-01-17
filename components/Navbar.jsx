@@ -5,7 +5,6 @@ import Image from "next/image";
 import NavLink from "./Navlink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
-import LogoIcon from "../public/logo-icon.png";
 
 const navLinks = [
   {
@@ -30,29 +29,30 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-60">
-      <div className="flex flex-wrap items-center justify-between mx-auto p-4">
+    <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-80">
+      <div className="flex flex-wrap items-center justify-between mx-auto px-6 py-3 md:py-4">
         <Link
           href="/"
           className="text-xl md:text-xl text-white font-semibold">
-           <Image src={LogoIcon} alt="Logo" className="w-auto h-8" />
+            Aashi
+           {/* <Image src={LogoIcon} alt="Logo" className="w-auto h-8" /> */}
         </Link>
         <div className="block md:hidden">
           {!navbarOpen ? (
             <button
               id="nav-toggle"
-              className="flex items-center px-3 py-2 border rounded text-slate-200 border-slate-200 hover:text-white hover:border-white"
+              className="flex items-center px-3 py-2 rounded text-slate-200 hover:text-white hover:border-white"
               onClick={() => setNavbarOpen(true)}
             >
-              <Bars3Icon className="h-5 w-5" />
+              <Bars3Icon className="h-8 w-8" />
             </button>
           ) : (
             <button
               id="nav-toggle"
-              className="flex items-center px-3 py-2 border rounded text-slate-200 border-slate-200 hover:text-white hover:border-white"
+              className="flex items-center px-3 py-2 rounded text-slate-200 hover:text-white hover:border-white"
               onClick={() => setNavbarOpen(false)}
             >
-              <XMarkIcon className="h-5 w-5" />
+              <XMarkIcon className="h-8 w-8" />
             </button>
           )}
         </div>

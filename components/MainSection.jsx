@@ -15,7 +15,7 @@ const MainSection = () => {
     <section className="h-screen w-full grid grid-cols-1 lg:grid-cols-12 my-4 -mt-1">
       <div className="col-span-1 lg:col-span-7 place-self-center place-items-center lg:place-items-start px-4">
         <div className="flex flex-wrap items-center gap-4 mb-6 justify-center lg:justify-start">
-          <div className="socials flex flex-row gap-4 z-10">
+          <div className="socials flex flex-row pt-8 gap-4">
             <Link href="mailto:aashi30singh@gmail.com" target="_blank">
               <Image src={EmailIcon} alt="Email" width={32} height={32} />
             </Link>
@@ -40,23 +40,23 @@ const MainSection = () => {
           <br />
           <motion.span
             {...INVIEWSLIDE(0, 0)}
-            className="text-5xl sm:text-7xl lg:text-8xl bg-gradient-to-br from-[#feac5e] via-[#c779d0] to-[#4bc0c8] bg-clip-text text-transparent"
+            className="text-5xl sm:text-7xl lg:text-8xl text-white bg-clip-text text-transparent"
           >
-            <TYPEWRITER
-              words={["Aashi Singh"]}
-              typeSpeed={300}
-              cursor={true}
-              cursorStyle={"|"}
-            />
+            Aashi Singh
           </motion.span>
         </h1>
-        <p className="text-gray-300 mb-3 text-lg lg:text-xl text-center lg:text-left">
-          Aspiring Software Engineer
+        <p className="bg-clip-text text-transparent bg-gradient-to-br from-[#feac5e] via-[#c779d0] to-[#4bc0c8] mb-3 text-xl lg:text-2xl text-center lg:text-left">
+          <TYPEWRITER
+            words={["Software Engineer"]}
+            typeSpeed={150}
+            cursor={true}
+            cursorStyle={"|"}
+          />
         </p>
-        <p className="text-gray-500 text-base md:text-lg text-center lg:text-left">
+        <p className="text-gray-400 text-base md:text-lg text-center lg:text-left">
           Bachelor of Science in Computer Science and Engineering
         </p>
-        <p className="text-gray-500 text-base md:text-lg text-center lg:text-left mb-6">
+        <p className="text-gray-400 text-base md:text-lg text-center lg:text-left mb-6">
           University of California, Irvine, 2025
         </p>
       </div>
