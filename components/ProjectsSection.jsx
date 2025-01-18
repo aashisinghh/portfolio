@@ -36,15 +36,14 @@ const projects = [
     {
         title: "Columns Game",
         description: "Created a puzzle-based columns game using PyGame libraries in Python, including UI design and visual elements. Incorporated various game mechanics using object-oriented programming.",
-        image: '/public/images/cover-photo.png',
-        // image: '/columns.gif',
+        image: '/columns.gif',
         // link: "https://yujisatojr.itch.io/highspeedchase",
         techStack: ["Python", "PyGame", "OOP"],
     },
     {
         title: "Flix",
         description: "Flix is a movie browsing app that pulls data from The Movie Database API, allowing users to explore now-playing films and view detailed movie information and posters. Users can scroll through a list of movies, tap for more details, and toggle between a list and grid view using a CollectionView.",
-        image: '/public/images/cover-photo.png',
+        image: '/flix.gif',
         link: "https://github.com/aashisinghh/Flix",
         techStack: ["Swift", "TMDb API"],
     },
@@ -72,17 +71,18 @@ const Project = () => {
       </h2>
       <div className="projects-grid grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-screen-xl mx-auto">
         {projects.map((project, index) => (
+          <div className="transition duration-300 transform hover:scale-105">
           <motion.div
             key={index}
             className="project-box bg-[#121212] shadow-md p-6 rounded-lg max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto"
             {...INVIEWSLIDE(index % 2 === 0 ? -100 : 100, 0)}
           >
-            <div className="relative w-full h-80 mb-4">
+            <div className="transition duration-300 transform hover:scale-105 relative w-full h-80 mb-4">
               <Image
                 src={project.image}
                 alt="thumbnail"
                 layout="fill"
-                objectFit="full"
+                objectFit="contain"
                 className="rounded-lg"
               />
             </div>
@@ -105,13 +105,14 @@ const Project = () => {
               {project.techStack.map((tech, idx) => (
                 <span
                   key={idx}
-                  className="bg-gray-800 text-gray-300 text-sm px-3 py-1 rounded-full mr-2 mb-2"
+                  className="transition duration-300 transform hover:scale-110 bg-gray-800 text-gray-300 text-sm px-3 py-1 rounded-full mr-2 mb-2"
                 >
                   {tech}
                 </span>
               ))}
             </div>
           </motion.div>
+         </div>
         ))}
       </div>
     </div>
