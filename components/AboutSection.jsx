@@ -25,13 +25,13 @@ const AboutCard = () => {
 
             {/* Content Section */}
             <div className="w-full sm:w-2/3 p-6 sm:ml-4">
-              <h2 className="text-lg font-bold text-white mb-4">Hi, I'm</h2>
-              <h2 className="text-5xl font-cursive font-bold text-white mb-4">Aashi Singh!</h2>
-              <p className="text-gray-400 text-base mb-6">
+              <h2 className="sm:text-lg text-base font-bold text-white mb-4">Hi, I'm</h2>
+              <h2 className="sm:text-5xl text-2xl font-cursive font-bold text-white mb-4">Aashi Singh!</h2>
+              <p className="text-gray-400 sm:text-base text-sm mb-6">
                 I am a Computer Science and Engineering student at UC Irvine, graduating in 2025, with a passion for AI/ML, software development, and creating innovative solutions to address real-world challenges.
               </p>
-              <p className="text-gray-400 text-base mb-6">
-                I have gained valuable experiences through internships and research, where I contributed to a variety of projects involving AI/ML and software solutions. These experiences have enhanced my skills in building scalable systems and collaborating with cross-functional teams. I am currently seeking new grad software engineering opportunities. Feel free to contact me and check out my work!
+              <p className="text-gray-400 sm:text-base text-sm mb-6">
+                I have gained valuable experiences through internships and research, where I contributed to a variety of projects. These experiences have enhanced my skills in building scalable systems and collaborating with cross-functional teams. I am currently seeking new grad software engineering opportunities. Feel free to contact me and check out my work!
               </p>
               <div className="socials flex flex-row gap-4 z-10">
                 <Link href="mailto:aashi30singh@gmail.com" target="_blank">
