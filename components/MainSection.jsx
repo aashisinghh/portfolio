@@ -6,9 +6,9 @@ import { motion } from "motion/react";
 
 const MainSection = () => {
   return (
-    <section className="h-screen w-full flex flex-col items-center justify-center my-4">
+    <section className="h-screen w-full flex flex-col items-center justify-center my-4 pt-16">
       <div className="text-center">
-        <h1 className="text-white font-extrabold mb-4">
+        <h1 className="text-white font-extrabold mb-4 z-50">
           <motion.span
             {...INVIEWSLIDE(0, 0)}
             className="font-cursive text-5xl sm:text-7xl lg:text-8xl text-white bg-clip-text text-transparent"
@@ -16,7 +16,7 @@ const MainSection = () => {
             Aashi Singh
           </motion.span>
         </h1>
-        <p className="bg-clip-text text-transparent bg-gradient-to-br from-[#feac5e] via-[#c779d0] to-[#4bc0c8] text-xl lg:text-2xl">
+        <p className="bg-clip-text text-transparent bg-gradient-to-br from-[#feac5e] via-[#c779d0] to-[#4bc0c8] text-xl lg:text-2xl z-50">
           <TYPEWRITER
             words={["Software Engineer"]}
             typeSpeed={150}
