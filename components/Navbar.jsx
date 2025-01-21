@@ -33,13 +33,13 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-10 flex flex-row items-center gap-4 px-6 py-2 bg-[#121212] bg-opacity-80 rounded-full">
+    <nav className="fixed top-4 md:left-1/2 transform md:-translate-x-1/2 z-10 flex flex-row items-center gap-4 px-6 py-2 md:bg-[#121212] md:bg-opacity-80 rounded-full">
       <div className="flex flex-wrap justify-end mx-auto">
         <div className="block md:hidden">
           {!navbarOpen ? (
             <button
               id="nav-toggle"
-              className="flex px-3 py-2 rounded text-slate-200 hover:text-white hover:border-white"
+              className="flex px-3 py-2 rounded text-slate-200 hover:text-white hover:border-white bg-[#121212] bg-opacity-80"
               onClick={() => setNavbarOpen(true)}
             >
               <Bars3Icon className="h-8 w-8" />
@@ -47,7 +47,7 @@ const Navbar = () => {
           ) : (
             <button
               id="nav-toggle"
-              className="flex items-center px-3 py-2 rounded text-slate-200 hover:text-white hover:border-white"
+              className="flex items-center px-3 py-2 rounded text-slate-200 hover:text-white hover:border-white bg-[#121212] bg-opacity-80"
               onClick={() => setNavbarOpen(false)}
             >
               <XMarkIcon className="h-8 w-8" />
