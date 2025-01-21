@@ -13,18 +13,18 @@ const projects = [
         techStack: ["Python", "C++", "Threading", "Flask", "JavaScript", "HTML/CSS"],
     },
     {
+      title: "GlucoGuard",
+      description: "Developed a mobile application for an automated glucose delivery device, providing a flexible UI for monitoring nocturnal hypoglycemic episodes and receiving alerts. Engineered a logistic regression ML model to predict optimal glucose administration times, leveraging data from the Dexcom API and Firebase. Implemented a Flask server to simulate bluetooth communication on a Raspberry Pi.",
+      image: '/glucoguard.png',
+      link: "https://docs.google.com/presentation/d/1Zqc5Ua1vgUs_oG18x9vr4XdF1Pmi6V-MnmFGzapmAXw/edit#slide=id.g4dfce81f19_0_45",
+      techStack: ["React Native", "TypeScript", "Python", "Flask", "Figma", "HTML/CSS", "ML", "Dexcom API", "Firebase", "Raspberry Pi"],
+    },
+    {
         title: "Sudoku AI Solver",
         description: "Developed an AI system to solve Sudoku puzzles. Implemented heuristics and backtracking for efficient solution navigation, reducing average solve time by 40%.",
         image: '/sudoku.gif',
         // link: "https://yujisatojr.itch.io/highspeedchase",
         techStack: ["Python", "Flask", "JavaScript", "HTML/CSS"],
-    },
-    {
-        title: "GlucoGuard",
-        description: "Developed a mobile application for an automated glucose delivery device, providing a flexible UI for monitoring nocturnal hypoglycemic episodes and receiving alerts. Engineered a logistic regression ML model to predict optimal glucose administration times, leveraging data from the Dexcom API and Firebase. Implemented a Flask server to simulate bluetooth communication on a Raspberry Pi.",
-        image: '/glucoguard.png',
-        link: "https://docs.google.com/presentation/d/1Zqc5Ua1vgUs_oG18x9vr4XdF1Pmi6V-MnmFGzapmAXw/edit#slide=id.g4dfce81f19_0_45",
-        techStack: ["React Native", "TypeScript", "Python", "Flask", "Figma", "HTML/CSS", "ML", "Dexcom API", "Firebase", "Raspberry Pi"],
     },
     {
         title: "Edsight",
@@ -105,7 +105,7 @@ const Project = () => {
               {project.techStack.map((tech, idx) => (
                 <span
                   key={idx}
-                  className="transition duration-300 transform hover:scale-110 bg-gray-800 text-gray-300 text-sm px-3 py-1 rounded-full mr-2 mb-2"
+                  className="bg-gray-800 text-gray-300 text-sm px-3 py-1 rounded-full mr-2 mb-2"
                 >
                   {tech}
                 </span>

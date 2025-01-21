@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import MainSection from "@/components/MainSection";
+import AboutSection from "@/components/AboutSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
@@ -11,6 +12,7 @@ export default function Home() {
       <div className="fixed inset-0 -z-10 h-full w-full [background:radial-gradient(130%_130%_at_50%_10%,#000_40%,#849_100%)]"></div>
       <Navbar />
         <MainSection />
+        <AboutSection />
         <ExperienceSection />
         <ProjectsSection />
         <ContactSection />

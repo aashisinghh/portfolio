@@ -12,6 +12,10 @@ const navLinks = [
     path: "/",
   },
   {
+    title: "About",
+    path: "#about",
+  },
+  {
     title: "Experience",
     path: "#experience",
   },
@@ -29,19 +33,13 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-80">
-      <div className="flex flex-wrap items-center justify-between mx-auto px-6 py-3 md:py-4">
-        <Link
-          href="/"
-          className="text-xl md:text-xl text-white font-semibold">
-            Aashi
-           {/* <Image src={LogoIcon} alt="Logo" className="w-auto h-8" /> */}
-        </Link>
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-10 flex flex-row items-center gap-4 px-6 py-2 bg-[#121212] bg-opacity-80 rounded-full">
+      <div className="flex flex-wrap justify-end mx-auto">
         <div className="block md:hidden">
           {!navbarOpen ? (
             <button
               id="nav-toggle"
-              className="flex items-center px-3 py-2 rounded text-slate-200 hover:text-white hover:border-white"
+              className="flex px-3 py-2 rounded text-slate-200 hover:text-white hover:border-white"
               onClick={() => setNavbarOpen(true)}
             >
               <Bars3Icon className="h-8 w-8" />

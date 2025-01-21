@@ -85,20 +85,20 @@ const Timeline = () => {
                   <div  className="flex flex-wrap justify-between items-center mb-4">
                   
                     <div className="flex flex-col">
-                      <span className="text-xl font-semibold text-gray-900 dark:text-white">{item.title}</span>
-                      <span className="text-md text-gray-400 dark:text-gray-500">{item.company}</span>
+                      <span className="text-xl font-semibold text-white">{item.title}</span>
+                      <span className="text-md text-gray-500">{item.company}</span>
                     </div>
                     <div className="flex flex-col items-end">
-                      <span className="text-sm text-gray-400 dark:text-gray-500">{item.date}</span>
-                      <span className="text-sm text-gray-400 dark:text-gray-500">{item.location}</span>
+                      <span className="text-sm text-gray-500">{item.date}</span>
+                      <span className="text-sm text-gray-500">{item.location}</span>
                     </div>
                   </div>
-                  <p className="text-base font-normal text-gray-500 dark:text-gray-400 mb-4">
+                  <p className="text-base text-gray-400 mb-4">
                     {item.content}
                   </p>
                   <div className="flex flex-wrap mt-4 justify-start">
                     {item.techStack.map((tech, idx) => (
-                      <span key={idx} className="transition duration-300 transform hover:scale-110 bg-gray-800 text-gray-300 text-sm px-3 py-1 rounded-full mr-2 mb-2">
+                      <span key={idx} className="bg-gray-800 text-gray-300 text-sm px-3 py-1 rounded-full mr-2 mb-2">
                         {tech}
                       </span>
                     ))}

@@ -14,6 +14,7 @@ export default {
       },
       fontFamily: {
         custom: ['Quicksand'],
+        cursive: ['Windsong'],
       },
     },
   },
