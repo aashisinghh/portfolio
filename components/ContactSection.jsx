@@ -19,16 +19,16 @@ const ContactSection = () => {
       </div>
       <div className="socials flex flex-row gap-4 z-10">
         <Link href='mailto:aashi30singh@gmail.com' target="_blank">
-          <Image src={EmailIcon} alt="Email Icon" width={32} height={32} />
+          <Image src={EmailIcon} alt="Email" width={32} height={32} title="Email"/>
         </Link>
         <Link href="https://github.com/aashisinghh" target="_blank">
-          <Image src={GithubIcon} alt="Github Icon" width={32} height={32} />
+          <Image src={GithubIcon} alt="Github" width={32} height={32} title="Github"/>
         </Link>
         <Link href="https://linkedin.com/in/aashisingh" target="_blank">
-          <Image src={LinkedinIcon} alt="Linkedin Icon" width={32} height={32} />
+          <Image src={LinkedinIcon} alt="LinkedIn" width={32} height={32} title="LinkedIn"/>
         </Link>
         <Link href="/Aashi_Singh_resume.pdf" target="_blank">
-          <Image src={DocumentIcon} alt="Resume Icon" width={32} height={32} />
+          <Image src={DocumentIcon} alt="Resume" width={32} height={32} title="Resume"/>
         </Link>
       </div>
     </section>
