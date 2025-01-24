@@ -34,6 +34,20 @@ const projects = [
         techStack: ["Python", "React", "OpenAI API", "Prompt Engineering", "Research"],
     },
     {
+      title: "Predicting Hospital Readmissions for Diabetes Patients",
+      description: "Conducted an analysis of various classification algorithms to predict hospital readmissions using a diabetes dataset. Evaluated models including logistic regression, decision trees, and random forests for performance metrics such as accuracy, precision, recall, and F1-score. Optimized model parameters and employed feature engineering to enhance predictive accuracy.",
+      image: "/diabetes.png",
+      link: "/diabetes-report.pdf",
+      techStack: ["Machine Learning", "Python", "Pandas", "Scikit-learn", "Matplotlib"]
+    },
+    {
+      title: "Microcontroller-Based Calculator",
+      description: "Designed and implemented a functional calculator using the Tiva C microcontroller. Integrated a 16x2 LCD for result display and a 4x4 matrix keypad for user input. Developed embedded C code to handle arithmetic operations, input validation, and real-time display updates. Utilized GPIO for interfacing the LCD and keypad, ensuring efficient and responsive operation.",
+      image: "/calculator.png",
+      // link: "/diabetes-report.pdf",
+      techStack: ["Tiva C", "Embedded C"]
+    },
+    {
         title: "Columns Game",
         description: "Created a puzzle-based columns game using PyGame libraries in Python, including UI design and visual elements. Incorporated various game mechanics using object-oriented programming.",
         image: '/columns.gif',
@@ -47,20 +61,20 @@ const projects = [
         link: "https://github.com/aashisinghh/Flix",
         techStack: ["Swift", "TMDb API"],
     },
-    {
-        title: "Parstagram",
-        description: "This photo viewing app integrates with a custom Parse backend, enabling users to sign up, log in, and post photos with captions while viewing a global feed and interacting with comments. Features include user authentication, persistent login across app restarts, viewing the latest posts, and adding comments to shared photos.",
-        image: '/public/images/cover-photo.png',
-        link: "https://github.com/aashisinghh/Instagram",
-        techStack: ["Swift", "Parse SDK", "OAuth"],
-    },
-    {
-        title: "Twitter Clone",
-        description: "This Twitter clone allows users to compose, favorite, and retweet tweets while providing a seamless experience with features like login persistence across app restarts, infinite tweet loading, and a pull-to-refresh option. It includes a stylish launch screen, user profile integration, and the ability to view tweets with profile pictures, usernames, and text.",
-        image: '/public/images/cover-photo.png',
-        link: "https://github.com/aashisinghh/Twitter",
-        techStack: ["Swift", "OAuth", "Twitter API"],
-    },
+    // {
+    //     title: "Parstagram",
+    //     description: "This photo viewing app integrates with a custom Parse backend, enabling users to sign up, log in, and post photos with captions while viewing a global feed and interacting with comments. Features include user authentication, persistent login across app restarts, viewing the latest posts, and adding comments to shared photos.",
+    //     // image: '/public/images/cover-photo.png',
+    //     link: "https://github.com/aashisinghh/Instagram",
+    //     techStack: ["Swift", "Parse SDK", "OAuth"],
+    // },
+    // {
+    //     title: "Twitter Clone",
+    //     description: "This Twitter clone allows users to compose, favorite, and retweet tweets while providing a seamless experience with features like login persistence across app restarts, infinite tweet loading, and a pull-to-refresh option. It includes a stylish launch screen, user profile integration, and the ability to view tweets with profile pictures, usernames, and text.",
+    //     // image: '/public/images/cover-photo.png',
+    //     link: "https://github.com/aashisinghh/Twitter",
+    //     techStack: ["Swift", "OAuth", "Twitter API"],
+    // },
 ];
 
 const Project = () => {
