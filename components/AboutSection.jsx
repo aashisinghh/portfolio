@@ -6,22 +6,25 @@ import EmailIcon from "../public/email-icon.svg";
 import DocumentIcon from "../public/document-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
+import { INVIEWSLIDE } from "../constants/index";
+import { motion } from "motion/react";
 
 const AboutCard = () => {
   return (
     <main className="relative font-inter antialiased flex flex-col justify-center overflow-hidden" id="about">
       <div className="relative mx-auto p-6 sm:p-20">
         {/* About Section */}
-        <div className="flex flex-col sm:flex-row justify-center items-center bg-[#121212] p-5 rounded-lg">
+        <div className="flex flex-col sm:flex-row justify-center items-center bg-[#121212] p-5 rounded-lg transition duration-300 transform hover:scale-105">
           <div className="max-w-4xl rounded-lg overflow-hidden flex relative flex-col sm:flex-row">
             {/* Image Section */}
-            <div className="w-full sm:w-1/3 mb-6 sm:mb-0">
+            <motion.div className="w-full sm:w-1/3 mb-6 sm:mb-0"
+              {...INVIEWSLIDE(0, 0)}>
               <img 
                 src="/cover-photo.png" 
                 alt="About" 
                 className="w-full h-full object-cover" 
               />
-            </div>
+            </motion.div>
 
             {/* Content Section */}
             <div className="w-full sm:w-2/3 p-6 sm:ml-4">
@@ -49,7 +52,8 @@ const AboutCard = () => {
               </div>
             </div>
 
-            <div className="absolute bottom-1 right-2 z-50">
+            <motion.div className="absolute bottom-1 right-2 z-50"
+              {...INVIEWSLIDE(0, 0)}>
             <img 
               src="/anteater.png" 
               alt="Anteater" 
@@ -57,7 +61,7 @@ const AboutCard = () => {
               height={100} 
               className="object-cover" 
             />
-          </div>
+          </motion.div>
 
           </div>
 

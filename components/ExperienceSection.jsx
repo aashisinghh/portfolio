@@ -12,7 +12,7 @@ const timelineData = [
     company: "UnitedHealth Group – Optum",
     content:
       "Engineered a next best activity recommendation ML model for UnitedHealthcare Rewards App users leveraging AWS services.Engineered a next best activity recommendation ML model for UnitedHealthcare Rewards App users leveraging AWS services.",
-    techStack: ["AWS Lambda", "AWS AppSync", "AWS Personalize", "AWS Glue", "AWS S3", "AWS DynamoDB", "AWS CDK", "Python", "React Native", "GitHub Actions", "CI/CD", "ML"],
+    techStack: ["AWS Lambda", "AWS AppSync", "AWS Personalize", "AWS Glue", "AWS S3", "AWS DynamoDB", "AWS CDK", "Python", "React Native", "GitHub Actions", "CI/CD", "Machine Learning"],
     logo: "/unitedhealthgroup-logo.jpg",
   },
   {
@@ -23,13 +23,13 @@ const timelineData = [
     company: "IMD Solutions",
     content:
       "Developed a mobile application for the Automated Glucose Delivery Device (GlucoGuard) for monitoring nocturnal hypoglycemic episodes and receiving alerts. Engineered a logistic regression ML model to predict optimal glucose administration times.",
-    techStack: ["React Native", "TypeScript", "Python", "Flask", "Figma", "HTML/CSS", "ML", "Dexcom API", "Firebase", "Raspberry Pi"],
-    // logo: "/path/to/uci-logo.png",
+    techStack: ["React Native", "TypeScript", "Python", "Flask", "Figma", "HTML/CSS", "Machine Learning", "Dexcom API", "Firebase", "Raspberry Pi"],
+    // logo: "/imd-logo.png",
   },
   {
     label: "UCI Design and Partnership Lab",
     date: "January 2024 – Present",
-    title: "Software Developer",
+    title: "Software Development Researcher",
     location: "Irvine, CA",
     company: "Design and Partnership Lab",
     content:
