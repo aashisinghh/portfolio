@@ -81,7 +81,7 @@ const Timeline = () => {
                   />
                 </motion.span>
               <div className="transition duration-300 transform hover:scale-105">
-                <motion.div {...INVIEWSLIDE(100, 0)} className="bg-[#121212] p-6 rounded-lg shadow-md">
+                <motion.div {...INVIEWSLIDE(100, 0)} className="bg-[#121212] bg-opacity-50 p-6 rounded-lg shadow-md">
                   <div  className="flex flex-wrap justify-between items-center mb-4">
                   
                     <div className="flex flex-col">

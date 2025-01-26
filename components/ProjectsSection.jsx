@@ -88,7 +88,7 @@ const Project = () => {
           <div key={index} className="transition duration-300 transform hover:scale-105">
           <motion.div
             key={index}
-            className="project-box bg-[#121212] shadow-md p-6 rounded-lg max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto"
+            className="project-box bg-[#121212] bg-opacity-50 shadow-md p-6 rounded-lg max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto"
             {...INVIEWSLIDE(index % 2 === 0 ? -100 : 100, 0)}
           >
             <div className="relative w-full h-80 mb-4">

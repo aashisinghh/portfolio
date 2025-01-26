@@ -14,7 +14,7 @@ const AboutCard = () => {
     <main className="relative font-inter antialiased flex flex-col justify-center overflow-hidden" id="about">
       <div className="relative mx-auto p-6 sm:p-20">
         {/* About Section */}
-        <div className="flex flex-col sm:flex-row justify-center items-center bg-[#121212] p-5 rounded-lg transition duration-300 transform hover:scale-105">
+        <div className="flex flex-col sm:flex-row justify-center items-center bg-[#121212] bg-opacity-50 p-5 rounded-lg transition duration-300 transform hover:scale-105">
           <div className="max-w-4xl rounded-lg overflow-hidden flex relative flex-col sm:flex-row">
             {/* Image Section */}
             <motion.div className="w-full sm:w-1/3 mb-6 sm:mb-0"

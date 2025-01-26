@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 
 const MainSection = () => {
   return (
-    <section className="h-screen w-full flex flex-col items-center justify-center my-4 pt-16">
+    <section className="h-screen w-full flex flex-col items-center justify-center my-4">
       <div className="text-center">
         <h1 className="text-white font-extrabold mb-4 z-50">
           <motion.span
