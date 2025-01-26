@@ -34,7 +34,7 @@ const projects = [
         techStack: ["Python", "React", "OpenAI API", "Prompt Engineering", "Research"],
     },
     {
-      title: "Predicting Hospital Readmissions for Diabetes Patients",
+      title: "Predicting Hospital Readmissions",
       description: "Conducted an analysis of various classification algorithms to predict hospital readmissions using a diabetes dataset. Evaluated models including logistic regression, decision trees, and random forests for performance metrics such as accuracy, precision, recall, and F1-score. Optimized model parameters and employed feature engineering to enhance predictive accuracy.",
       image: "/diabetes.png",
       link: "/diabetes-report.pdf",
